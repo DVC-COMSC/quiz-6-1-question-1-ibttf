@@ -5,10 +5,13 @@ using namespace std;
 // Declare Function Prototypes
 //********************
 void getTwoValues(int& begin, int& end ){
-    cout << "Enter two values";
     do {
-        cin>>begin>>end;
-    } while (begin < end);
+        cout << "Enter two values: ";
+        cin >> begin >> end;
+        if (begin >= end) {
+            cout << "The first number must be less than the second. Please try again.\n";
+        }
+    } while (begin >= end);
 }
 
 
